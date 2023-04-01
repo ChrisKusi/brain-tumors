@@ -1,11 +1,13 @@
 import streamlit as st
 import av
 from PIL import Image
+import threading
 from torchvision import transforms
 from ultralytics import YOLO  # import YOLO algorithm from ultralyrics
 import os
 import glob
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
+import cv2
 
 model = YOLO(
     "C:/Users/RR NX 4301/Desktop/brain_tumors/runs\detect/brain_tumor_custom_#42/weights/best.pt")  # Load your trained model
@@ -96,8 +98,6 @@ if option == "Real-time Detection":
         # Display the most recent prediction image in Streamlit
         st.image(prediction_images, caption="Most recent prediction")
         st.error("Brain Tumor detection, seek immediate health care", icon="🚨")
-
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
     webrtc_streamer(key="example", video_frame_callback=callback, rtc_configuration={  # Add this line
