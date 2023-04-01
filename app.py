@@ -1,13 +1,10 @@
-import streamlit as st
-import av
-from PIL import Image
-import threading
-from torchvision import transforms
-from ultralytics import YOLO  # import YOLO algorithm from ultralyrics
-import os
 import glob
-from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
-import cv2
+import os
+
+import streamlit as st
+from PIL import Image
+from streamlit_webrtc import webrtc_streamer
+from ultralytics import YOLO  # import YOLO algorithm from ultralyrics
 
 model = YOLO(
     "C:/Users/RR NX 4301/Desktop/brain_tumors/runs\detect/brain_tumor_custom_#42/weights/best.pt")  # Load your trained model
