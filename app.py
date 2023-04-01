@@ -1,5 +1,5 @@
 import streamlit as st
-import av
+# import av
 from PIL import Image
 from torchvision import transforms
 from ultralytics import YOLO  # import YOLO algorithm from ultralyrics
