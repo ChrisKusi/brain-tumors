@@ -7,7 +7,8 @@ from PIL import Image
 import ultralytics
 
 model = ultralytics.YOLO(
-    "C:/Users/RR NX 4301/Desktop/brain_tumors/runs\detect/brain_tumor_custom_#42/weights/best.pt")  # Load your trained model
+    "C:/Users/RR NX 4301/Desktop/brain_tumors/runs\detect/brain_tumor_custom_#42/weights/best.pt")  # Load your
+# trained model
 
 # logo = Image.open('brain-tumor-100.png')
 
@@ -15,7 +16,7 @@ with st.sidebar:
     # st.image(logo)
     st.title("Brain Tumor Detection")
 
-    option = st.radio("Brain tumor detection", ["Upload"])#, "Real-time Detection"])
+    option = st.radio("Brain tumor detection", ["Upload"])  # , "Real-time Detection"])
 
     st.info("This application allows you to detect brain tumors using Machine Learning")
 
