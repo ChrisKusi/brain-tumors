@@ -4,9 +4,9 @@ import os
 import streamlit as st
 from PIL import Image
 # from streamlit_webrtc import webrtc_streamer
-from ultralytics import YOLO  # import YOLO algorithm from ultralyrics
+import ultralytics
 
-model = YOLO(
+model = ultralytics.YOLO(
     "C:/Users/RR NX 4301/Desktop/brain_tumors/runs\detect/brain_tumor_custom_#42/weights/best.pt")  # Load your trained model
 
 # logo = Image.open('brain-tumor-100.png')
